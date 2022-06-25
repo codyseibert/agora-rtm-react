@@ -51,7 +51,7 @@ export default function App() {
       messagesRef.current.scrollHeight;
   }, [messages]);
 
-  function sendMessage(e) {
+  const sendMessage = (e) => {
     e.preventDefault();
     if (text === '') return;
     channel.sendMessage({ text, type: 'text' });
@@ -60,7 +60,7 @@ export default function App() {
       uid,
     });
     setText('');
-  }
+  };
 
   return (
     <main>
